@@ -23,7 +23,7 @@ public class FeedbackController {
 	
 	
 	//to add feedback of user 	
-	@PostMapping("/addFeedback")
+	@PostMapping("/feedback")
 	public Feedback addFeedback(@RequestBody Feedback feedback)
 	{
 		return this.feedbackService.addFeedback(feedback);
@@ -32,7 +32,7 @@ public class FeedbackController {
 	
 	
 	//to fetch feedback of user on the basis of rollNo
-	@GetMapping("/getFeedback/{id}")
+	@GetMapping("/feedback/{id}")
 	public Feedback getFeedback(@PathVariable("id") int id)
 	{
 		return this.feedbackService.getFeedback(id);
@@ -41,7 +41,7 @@ public class FeedbackController {
 	
 	
 	
-	@GetMapping("/getFeedback")
+	@GetMapping("/feedback")
 	public List<Feedback> getFeedback()
 	{
 		return this.feedbackService.getFeedback();		
@@ -50,14 +50,14 @@ public class FeedbackController {
 	
 	
 	
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/feedback/{id}")
 	public void deleteFeedback(@PathVariable("id") int id)
 	{
 		this.feedbackService.delete(id);
 	}
 	
 	
-	@PutMapping("/update/{id}")
+	@PutMapping("/feedback/{id}")
 	public Feedback updateFeedback(@RequestBody Feedback feedback,@PathVariable("id") int id)
 	{
 		return this.feedbackService.update(feedback,id);

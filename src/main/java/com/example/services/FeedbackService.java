@@ -10,7 +10,7 @@ import com.example.entity.Feedback;
 import com.example.repository.FeedbackRepo;
 
 @Service
-public class FeedbackService {	
+public class FeedbackService implements FeedbackInterface{	
 	
 	@Autowired
 	private FeedbackRepo feedbackRepo;
